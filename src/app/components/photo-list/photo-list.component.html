@@ -1,0 +1,11 @@
+<div class="card-columns">
+    <div class="card photo-card" (click)="fotoSeleccionada(foto._id)" *ngFor="let foto of fotos">
+      <div class="card-header text-center">
+        <h5>{{foto.title}}</h5>
+      </div>
+      <img [src]=" 'http://localhost:3000/' + foto.imagePath " class="card-img-top w-100" alt="Imagen vacaciones">
+      <div class="card-body">
+        <p class="card-text">{{foto.description}}</p>
+      </div>
+    </div>
+</div>
